@@ -24,9 +24,9 @@ def index():
             for j in scale[list(scale.keys())[i]]:
                 if int(pred[0][i]) in range(j[0],j[1]):
                     pred_score.append(score[scale[list(scale.keys())[i]].index(j)])
-        response = {'dep':[pred[0][0],pred_score[0]],
-                    'anx':[pred[0][1],pred_score[1]],
-                    'strs':[pred[0][2],pred_score[2]],
+        response = {'dep':[int(pred[0][0]),pred_score[0]],
+                    'anx':[int(pred[0][1]),pred_score[1]],
+                    'strs':[int(pred[0][2]),pred_score[2]],
                     }
         return Response(json.dumps( response ))
     return render_template('index.html')
