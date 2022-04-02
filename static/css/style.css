@@ -1,0 +1,30 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #67568c;
+    user-select: none;
+}
+#box{
+    background-color: #1f1235;
+}
+.msg{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fbdd74;
+    color: #1f1235;
+}
+#options div{
+    border-left: 1px solid #eee ;
+    border-right: 1px solid #eee ;
+    padding: .5em 1em;
+    margin-bottom: .5em;
+    border-radius: .2em;
+    cursor: pointer;
+    transition: .1s;
+    animation: click .1s forwards;
+}
+#options div:hover{
+    background-color: #eee;
+    color: #222;
+}
+a{
+    color: #111;
+}
