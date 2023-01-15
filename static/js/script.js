@@ -50,7 +50,9 @@ function load_q(){
     }
     curr_q++;
     document.getElementById('question').innerText=qlist[curr_q];
-    
+    $(".progress-bar").animate({
+        width: `${curr_q*100/(qlist.length)}%`
+    }, 200);
 }
 load_q()
 
@@ -65,6 +67,8 @@ function ans(id){
 function submit(){
     document.getElementById('box').innerHTML += "<div class='fs-2 text-center' id='submit-text'>Submitting</div>"
     document.getElementById('form').remove()
+    document.getElementById('progress').style.width=`100%`;
+
     $.ajax({
         type : "POST",
         url : "/",

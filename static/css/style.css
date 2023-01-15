@@ -28,3 +28,11 @@ body{
 a{
     color: #111;
 }
+#progesss{
+    width: 0%;
+    transition: width .2s !important;
+}
+.progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
